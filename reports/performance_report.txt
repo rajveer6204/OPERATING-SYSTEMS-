@@ -1,0 +1,117 @@
+
+============================================================
+             OS RESOURCE MANAGEMENT SIMULATOR
+                    PERFORMANCE REPORT
+============================================================
+
+Generated On: 13-11-2026 22:10:56
+
+---------------- CPU SCHEDULING ----------------
+
+
+FCFS
+-------------------------------------------------------
+{'PID': 'P1', 'Arrival': 0, 'Burst': 5, 'Priority': 2, 'Completion': 5, 'Turnaround': 5, 'Waiting': 0}
+{'PID': 'P2', 'Arrival': 1, 'Burst': 3, 'Priority': 1, 'Completion': 8, 'Turnaround': 7, 'Waiting': 4}
+{'PID': 'P3', 'Arrival': 2, 'Burst': 2, 'Priority': 3, 'Completion': 10, 'Turnaround': 8, 'Waiting': 6}
+Gantt Chart: [('P1', 0, 5), ('P2', 5, 8), ('P3', 8, 10)]
+Average Waiting Time: 3.33
+Average Turnaround Time: 6.67
+
+SJF
+-------------------------------------------------------
+{'PID': 'P1', 'Arrival': 0, 'Burst': 5, 'Priority': 2, 'Completion': 5, 'Turnaround': 5, 'Waiting': 0}
+{'PID': 'P2', 'Arrival': 1, 'Burst': 3, 'Priority': 1, 'Completion': 10, 'Turnaround': 9, 'Waiting': 6}
+{'PID': 'P3', 'Arrival': 2, 'Burst': 2, 'Priority': 3, 'Completion': 7, 'Turnaround': 5, 'Waiting': 3}
+Gantt Chart: [('P1', 0, 5), ('P3', 5, 7), ('P2', 7, 10)]
+Average Waiting Time: 3.00
+Average Turnaround Time: 6.33
+
+Round Robin
+-------------------------------------------------------
+{'PID': 'P1', 'Arrival': 0, 'Burst': 5, 'Priority': 2, 'Completion': 10, 'Turnaround': 10, 'Waiting': 5}
+{'PID': 'P2', 'Arrival': 1, 'Burst': 3, 'Priority': 1, 'Completion': 9, 'Turnaround': 8, 'Waiting': 5}
+{'PID': 'P3', 'Arrival': 2, 'Burst': 2, 'Priority': 3, 'Completion': 6, 'Turnaround': 4, 'Waiting': 2}
+Gantt Chart: [('P1', 0, 2), ('P2', 2, 4), ('P3', 4, 6), ('P1', 6, 8), ('P2', 8, 9), ('P1', 9, 10)]
+Average Waiting Time: 4.00
+Average Turnaround Time: 7.33
+
+Priority
+-------------------------------------------------------
+{'PID': 'P1', 'Arrival': 0, 'Burst': 5, 'Priority': 2, 'Completion': 5, 'Turnaround': 5, 'Waiting': 0}
+{'PID': 'P2', 'Arrival': 1, 'Burst': 3, 'Priority': 1, 'Completion': 8, 'Turnaround': 7, 'Waiting': 4}
+{'PID': 'P3', 'Arrival': 2, 'Burst': 2, 'Priority': 3, 'Completion': 10, 'Turnaround': 8, 'Waiting': 6}
+Gantt Chart: [('P1', 0, 5), ('P2', 5, 8), ('P3', 8, 10)]
+Average Waiting Time: 3.33
+Average Turnaround Time: 6.67
+
+
+---------------- MEMORY MANAGEMENT ----------------
+
+
+FIRST FIT
+-------------------------------------------------------
+{'Process': 'P1', 'Size': 212, 'Block': 'B2', 'Remaining': 288}
+{'Process': 'P2', 'Size': 417, 'Block': 'B5', 'Remaining': 183}
+{'Process': 'P3', 'Size': 112, 'Block': 'B2', 'Remaining': 176}
+{'Process': 'P4', 'Size': 426, 'Block': 'Not Allocated', 'Remaining': '-'}
+
+BEST FIT
+-------------------------------------------------------
+{'Process': 'P1', 'Size': 212, 'Block': 'B4', 'Remaining': 88}
+{'Process': 'P2', 'Size': 417, 'Block': 'B2', 'Remaining': 83}
+{'Process': 'P3', 'Size': 112, 'Block': 'B3', 'Remaining': 88}
+{'Process': 'P4', 'Size': 426, 'Block': 'B5', 'Remaining': 174}
+
+WORST FIT
+-------------------------------------------------------
+{'Process': 'P1', 'Size': 212, 'Block': 'B5', 'Remaining': 388}
+{'Process': 'P2', 'Size': 417, 'Block': 'B2', 'Remaining': 83}
+{'Process': 'P3', 'Size': 112, 'Block': 'B5', 'Remaining': 276}
+{'Process': 'P4', 'Size': 426, 'Block': 'Not Allocated', 'Remaining': '-'}
+
+
+---------------- DEADLOCK MANAGEMENT ----------------
+
+BANKER'S ALGORITHM
+==================================================
+
+NEED MATRIX
+P0: [7, 4, 3]
+P1: [1, 2, 2]
+P2: [6, 0, 0]
+P3: [0, 1, 1]
+P4: [4, 3, 1]
+
+Available Resources: [3, 3, 2]
+
+SYSTEM STATUS: SAFE STATE
+Safe Sequence: P1 -> P3 -> P4 -> P0 -> P2
+No deadlock detected.
+
+
+---------------- DISK SCHEDULING ----------------
+
+DISK SCHEDULING COMPARISON
+=======================================================
+
+FCFS
+Service Order: [98, 183, 37, 122, 14, 124, 65, 67]
+Total Head Movement: 640
+
+SSTF
+Service Order: [65, 67, 37, 14, 98, 122, 124, 183]
+Total Head Movement: 236
+
+SCAN
+Service Order: [65, 67, 98, 122, 124, 183, 199, 37, 14]
+Total Head Movement: 331
+
+C-SCAN
+Service Order: [65, 67, 98, 122, 124, 183, 199, 0, 14, 37]
+Total Head Movement: 382
+
+
+============================================================
+                       END OF REPORT
+============================================================
